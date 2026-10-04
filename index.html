@@ -1,0 +1,1606 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Lokagagan K S — academic resume, projects, skills, and supporting documents.">
+  <title>Lokagagan K S — Portfolio & Resume</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --bg: #ffffff;
+      --surface: #ffffff;
+      --surface2: #f6f6f6;
+      --line: #aeb3b8;
+      --text: #161616;
+      --muted: #454545;
+      --accent: #222222;
+      --accentbg: #f0f0f0;
+      --green: #235b39;
+      --amber: #76551a
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      font: 14px/1.6 Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif
+    }
+
+    a {
+      color: inherit
+    }
+
+    button,
+    input {
+      font: inherit
+    }
+
+    button,
+    a,
+    input {
+      outline-offset: 3px
+    }
+
+    a:focus-visible,
+    button:focus-visible,
+    input:focus-visible {
+      outline: 2px solid var(--accent)
+    }
+
+    .app {
+      min-height: 100vh
+    }
+
+    .sidebar {
+      position: fixed;
+      inset: 0 auto 0 0;
+      width: 230px;
+      background: #15171d;
+      border-right: 1px solid var(--line);
+      padding: 26px 17px;
+      display: flex;
+      flex-direction: column;
+      z-index: 4
+    }
+
+    .brand {
+      padding: 0 10px 26px;
+      border-bottom: 1px solid var(--line)
+    }
+
+    .brand strong {
+      display: block;
+      font-size: 14px;
+      letter-spacing: .02em
+    }
+
+    .brand span {
+      display: block;
+      margin-top: 3px;
+      font-size: 11px;
+      color: var(--muted)
+    }
+
+    .nav-label {
+      padding: 23px 10px 8px;
+      color: #777f8d;
+      text-transform: uppercase;
+      font-size: 10px;
+      letter-spacing: .13em;
+      font-weight: 750
+    }
+
+    .nav {
+      display: grid;
+      gap: 4px
+    }
+
+    .nav a {
+      display: flex;
+      align-items: center;
+      padding: 9px 10px;
+      text-decoration: none;
+      color: #b8bec8;
+      border-radius: 6px;
+      font-size: 13px;
+      border-left: 2px solid transparent
+    }
+
+    .nav a:hover {
+      background: #20232b;
+      color: var(--text)
+    }
+
+    .nav a.active {
+      background: #202b31;
+      color: #d9edf6;
+      border-left-color: var(--accent)
+    }
+
+    .sidebar-foot {
+      margin-top: auto;
+      padding: 15px 10px 0;
+      border-top: 1px solid var(--line);
+      font-size: 11px;
+      color: #818895
+    }
+
+    main {
+      margin-left: 230px;
+      max-width: 1240px;
+      padding: 0 44px 65px
+    }
+
+    .mobile-head {
+      display: none
+    }
+
+    .page-head {
+      padding: 36px 0 25px;
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 25px;
+      align-items: flex-start
+    }
+
+    .eyebrow {
+      font-size: 10px;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      color: var(--accent);
+      font-weight: 800
+    }
+
+    .page-head h1 {
+      font-size: clamp(28px, 3vw, 40px);
+      letter-spacing: -.045em;
+      line-height: 1.13;
+      margin: 11px 0 8px
+    }
+
+    .lead {
+      margin: 0;
+      color: #b5bbc5;
+      max-width: 640px;
+      font-size: 15px
+    }
+
+    .head-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      padding-top: 6px
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 7px;
+      padding: 9px 12px;
+      border: 1px solid #414650;
+      background: #20232a;
+      color: var(--text);
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer
+    }
+
+    .btn.primary {
+      background: #d3e5ed;
+      color: #18232a;
+      border-color: #d3e5ed
+    }
+
+    .btn:hover {
+      filter: brightness(1.08)
+    }
+
+    .contact {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 12px
+    }
+
+    .contact a {
+      text-decoration: none
+    }
+
+    .contact a:hover {
+      color: var(--accent)
+    }
+
+    section.content-section {
+      padding: 29px 0 5px;
+      border-bottom: 1px solid var(--line)
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 15px;
+      margin-bottom: 15px
+    }
+
+    .section-head h2 {
+      font-size: 19px;
+      letter-spacing: -.025em;
+      margin: 0
+    }
+
+    .section-head p {
+      font-size: 12px;
+      color: var(--muted);
+      margin: 3px 0 0
+    }
+
+    .section-count {
+      font-size: 11px;
+      color: var(--muted);
+      white-space: nowrap
+    }
+
+    .overview-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(230px, .8fr);
+      gap: 26px
+    }
+
+    .summary {
+      font-size: 14px;
+      color: #c1c6cf;
+      max-width: 700px;
+      margin: 0
+    }
+
+    .facts {
+      border-left: 1px solid var(--line);
+      padding-left: 20px;
+      display: grid;
+      gap: 10px
+    }
+
+    .fact {
+      display: grid;
+      grid-template-columns: 100px 1fr;
+      gap: 10px;
+      font-size: 12px
+    }
+
+    .fact span {
+      color: var(--muted)
+    }
+
+    .degree-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: start;
+      gap: 15px;
+      padding-bottom: 13px;
+      border-bottom: 1px solid var(--line)
+    }
+
+    .degree-head h3 {
+      font-size: 15px;
+      margin: 0
+    }
+
+    .degree-head p {
+      font-size: 12px;
+      color: var(--muted);
+      margin: 3px 0 0
+    }
+
+    .timeline {
+      position: relative;
+      margin: 18px 0 0 4px
+    }
+
+    .timeline:before {
+      content: "";
+      position: absolute;
+      left: 6px;
+      top: 10px;
+      bottom: 24px;
+      width: 1px;
+      background: #48515e
+    }
+
+    .timeline-item {
+      position: relative;
+      padding: 0 0 17px 27px
+    }
+
+    .dot {
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 13px;
+      height: 13px;
+      border-radius: 50%;
+      background: var(--green);
+      border: 3px solid #254334
+    }
+
+    .dot.pending {
+      background: #747c89;
+      border-color: #303640
+    }
+
+    .milestone {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 0 0 14px;
+      border-bottom: 1px solid #292d35
+    }
+
+    .timeline-item:last-child .milestone {
+      border-bottom: 0;
+      padding-bottom: 0
+    }
+
+    .milestone h4 {
+      font-size: 14px;
+      margin: 0;
+      font-weight: 700
+    }
+
+    .milestone-expandable {
+      display: block;
+      padding: 0 0 12px;
+      border-bottom: 1px solid #292d35
+    }
+
+    .stage-details {
+      width: 100%
+    }
+
+    .stage-summary {
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      cursor: pointer;
+      padding: 1px 0 3px
+    }
+
+    .stage-summary::-webkit-details-marker {
+      display: none
+    }
+
+    .stage-title-block {
+      min-width: 0;
+      display: grid;
+      gap: 3px
+    }
+
+    .stage-title-block strong {
+      font-size: 14px;
+      font-weight: 750;
+      line-height: 1.4
+    }
+
+    .stage-description {
+      font-size: 12px;
+      color: var(--muted);
+      overflow-wrap: anywhere
+    }
+
+    .stage-summary-right {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-shrink: 0
+    }
+
+    .chevron {
+      font-size: 18px;
+      color: #9aa3b0;
+      transition: transform .18s ease
+    }
+
+    .stage-extra {
+      margin-top: 12px;
+      padding: 12px 13px;
+      background: #171a20;
+      border: 1px solid #303540;
+      border-radius: 5px
+    }
+
+    .stage-extra strong {
+      display: block;
+      font-size: 12px;
+      font-weight: 750
+    }
+
+    .stage-extra p {
+      margin: 5px 0 0;
+      font-size: 12px;
+      color: var(--muted)
+    }
+
+    .stage-extra .proof-unavailable {
+      color: #b5bbc5
+    }
+
+    .milestone p {
+      font-size: 12px;
+      color: var(--muted);
+      margin: 3px 0 0
+    }
+
+    .state {
+      font-size: 10px;
+      white-space: nowrap;
+      color: var(--green);
+      border: 1px solid #315342;
+      padding: 3px 7px;
+      border-radius: 4px
+    }
+
+    .state.pending {
+      color: #c1c6cf;
+      border-color: #4a505a
+    }
+
+    .toolbar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      margin: 4px 0 16px
+    }
+
+    .toolbar input {
+      width: min(100%, 320px);
+      background: #171a21;
+      border: 1px solid #3a404b;
+      border-radius: 6px;
+      padding: 10px 11px;
+      color: var(--text)
+    }
+
+    .toolbar input::placeholder {
+      color: #858c98
+    }
+
+    .results {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 28px
+    }
+
+    .group {
+      margin: 0 0 20px;
+      min-width: 0
+    }
+
+    .group h3 {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: .11em;
+      color: #a8b0bc;
+      margin: 0 0 5px;
+      padding-bottom: 7px;
+      border-bottom: 1px solid var(--line)
+    }
+
+    .entry {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid #252932
+    }
+
+    .entry:last-child {
+      border-bottom: 0
+    }
+
+    .entry-info {
+      min-width: 0
+    }
+
+    .entry-info strong {
+      display: block;
+      font-size: 13px;
+      line-height: 1.4;
+      font-weight: 650;
+      overflow-wrap: anywhere
+    }
+
+    .meta {
+      font-size: 11px;
+      color: var(--muted);
+      margin-top: 3px;
+      overflow-wrap: anywhere
+    }
+
+    .proof {
+      flex-shrink: 0;
+      border: 1px solid #3a454f;
+      border-radius: 5px;
+      background: #1b252c;
+      color: #b9d8e7;
+      padding: 7px 9px;
+      font-size: 11px;
+      font-weight: 750;
+      cursor: pointer
+    }
+
+    .proof:hover {
+      background: #263842;
+      border-color: #577080
+    }
+
+    .empty {
+      color: var(--muted);
+      padding: 20px 0;
+      font-size: 13px
+    }
+
+    .skills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px
+    }
+
+    .skill {
+      border: 1px solid #343943;
+      background: #191c23;
+      padding: 5px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      color: #c5cbd4
+    }
+
+    .project-note {
+      color: var(--muted);
+      font-size: 12px;
+      margin: 0 0 12px
+    }
+
+    .footer {
+      padding: 27px 0 0;
+      color: #777f8c;
+      font-size: 11px
+    }
+
+    .modal {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: #050609e8;
+      z-index: 10;
+      padding: 24px;
+      align-items: center;
+      justify-content: center
+    }
+
+    .modal.open {
+      display: flex
+    }
+
+    .dialog {
+      width: min(1060px, 100%);
+      height: min(850px, 92vh);
+      background: var(--surface);
+      border: 1px solid #414752;
+      border-radius: 9px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column
+    }
+
+    .modalhead {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      padding: 11px 14px;
+      background: #20232a;
+      border-bottom: 1px solid var(--line)
+    }
+
+    .modalhead strong {
+      font-size: 12px;
+      overflow-wrap: anywhere
+    }
+
+    .modalhead button {
+      border: 1px solid #444b56;
+      background: #2b2f38;
+      color: var(--text);
+      border-radius: 5px;
+      padding: 7px 10px;
+      cursor: pointer
+    }
+
+    .viewer {
+      flex: 1;
+      min-height: 0;
+      background: #101216
+    }
+
+    .viewer iframe {
+      width: 100%;
+      height: 100%;
+      border: 0
+    }
+
+    .notice {
+      height: 100%;
+      overflow: auto;
+      padding: 28px;
+      color: #c3c9d2
+    }
+
+    .notice h3 {
+      margin: 0 0 8px;
+      color: var(--text);
+      font-size: 17px
+    }
+
+    .notice code {
+      overflow-wrap: anywhere;
+      background: #292e37;
+      padding: 3px 5px;
+      border-radius: 3px;
+      color: #d1e8f3
+    }
+
+    .notice p {
+      max-width: 620px
+    }
+
+    .notice a {
+      color: #b9d8e7
+    }
+
+    @media(max-width:900px) {
+      .sidebar {
+        width: 190px;
+        padding: 22px 12px
+      }
+
+      main {
+        margin-left: 190px;
+        padding: 0 25px 50px
+      }
+
+      .overview-grid {
+        grid-template-columns: 1fr
+      }
+
+      .facts {
+        border-left: 0;
+        border-top: 1px solid var(--line);
+        padding: 14px 0 0;
+        grid-template-columns: 1fr 1fr
+      }
+
+      .results {
+        grid-template-columns: 1fr
+      }
+    }
+
+    @media(max-width:650px) {
+      .sidebar {
+        display: none
+      }
+
+      main {
+        margin: 0;
+        padding: 0 17px 40px
+      }
+
+      .mobile-head {
+        display: flex;
+        position: sticky;
+        top: 0;
+        z-index: 5;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        padding: 11px 17px;
+        background: #111318f2;
+        border-bottom: 1px solid var(--line);
+        backdrop-filter: blur(10px)
+      }
+
+      .mobile-head strong {
+        font-size: 13px
+      }
+
+      .mobile-head select {
+        max-width: 52%;
+        background: #20232a;
+        color: var(--text);
+        border: 1px solid #414650;
+        border-radius: 5px;
+        padding: 7px;
+        font-size: 12px
+      }
+
+      .page-head {
+        padding: 25px 0 20px;
+        display: block
+      }
+
+      .head-actions {
+        justify-content: flex-start;
+        padding-top: 17px
+      }
+
+      .page-head h1 {
+        font-size: 32px
+      }
+
+      .lead {
+        font-size: 14px
+      }
+
+      .section-head {
+        align-items: start
+      }
+
+      .section-head h2 {
+        font-size: 18px
+      }
+
+      .toolbar {
+        display: block
+      }
+
+      .toolbar input {
+        width: 100%;
+        margin-top: 12px
+      }
+
+      .entry {
+        gap: 8px
+      }
+
+      .proof {
+        padding: 7px;
+        font-size: 10px
+      }
+
+      .facts {
+        grid-template-columns: 1fr
+      }
+
+      .fact {
+        grid-template-columns: 95px 1fr
+      }
+
+      .modal {
+        padding: 0
+      }
+
+      .dialog {
+        height: 100dvh;
+        width: 100%;
+        max-height: none;
+        border-radius: 0;
+        border: 0
+      }
+
+      .modalhead {
+        padding: 12px
+      }
+
+      .notice {
+        padding: 23px
+      }
+
+      .milestone {
+        gap: 8px
+      }
+
+      .state {
+        font-size: 9px;
+        padding: 3px 5px
+      }
+
+      .stage-summary {
+        align-items: flex-start
+      }
+
+      .stage-summary-right {
+        gap: 6px
+      }
+
+      .stage-summary-right .state {
+        white-space: normal;
+        text-align: center;
+        max-width: 95px
+      }
+
+      .stage-extra {
+        padding: 11px
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto
+      }
+
+      *,
+      *:before,
+      *:after {
+        transition: none !important;
+        animation: none !important
+      }
+    }
+
+    /* Resume-inspired print-like presentation */
+    body {
+      background: #fff;
+      color: #161616;
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 12px;
+      line-height: 1.4
+    }
+
+    .sidebar {
+      display: none
+    }
+
+    main {
+      margin: 0 auto;
+      max-width: 1120px;
+      padding: 0 24px 50px
+    }
+
+    .mobile-head {
+      display: none !important
+    }
+
+    .page-head {
+      padding: 20px 0 13px;
+      border-bottom: 2px solid #222;
+      display: block;
+      text-align: center
+    }
+
+    .page-head .eyebrow {
+      color: #333;
+      font-size: 10px;
+      letter-spacing: .06em
+    }
+
+    .page-head h1 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 27px;
+      letter-spacing: 0;
+      margin: 0 0 2px;
+      line-height: 1.2
+    }
+
+    .page-head .lead {
+      color: #222;
+      font-size: 12px;
+      margin: 0 auto;
+      max-width: 900px
+    }
+
+    .head-actions {
+      justify-content: center;
+      padding-top: 9px
+    }
+
+    .btn {
+      border: 1px solid #444;
+      background: #f7f7f7;
+      color: #111;
+      border-radius: 2px;
+      padding: 5px 9px;
+      font-size: 11px
+    }
+
+    .btn.primary {
+      background: #222;
+      color: #fff;
+      border-color: #222
+    }
+
+    .contact {
+      justify-content: center;
+      gap: 8px 16px;
+      margin-top: 5px;
+      color: #222;
+      font-size: 11px
+    }
+
+    section.content-section {
+      padding: 14px 0 5px;
+      border-bottom: 1px solid #777
+    }
+
+    .section-head {
+      align-items: center;
+      margin-bottom: 7px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 4px
+    }
+
+    .section-head h2 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 15px;
+      letter-spacing: 0;
+      text-transform: uppercase;
+      margin: 0
+    }
+
+    .section-head p {
+      color: #444;
+      font-size: 11px;
+      margin: 1px 0 0
+    }
+
+    .section-count {
+      color: #333;
+      font-size: 10px
+    }
+
+    .overview-grid {
+      grid-template-columns: minmax(0, 1.3fr) minmax(220px, .7fr);
+      gap: 18px
+    }
+
+    .summary {
+      font-size: 12px;
+      color: #222
+    }
+
+    .facts {
+      border-left: 1px solid #888;
+      padding-left: 13px;
+      gap: 5px
+    }
+
+    .fact {
+      font-size: 11px;
+      grid-template-columns: 85px 1fr;
+      gap: 7px
+    }
+
+    .fact span {
+      color: #444
+    }
+
+    .degree-head {
+      border-bottom: 1px solid #777;
+      padding-bottom: 7px
+    }
+
+    .degree-head h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 13px
+    }
+
+    .degree-head p {
+      color: #444;
+      font-size: 11px
+    }
+
+    .timeline {
+      margin-top: 10px
+    }
+
+    .timeline:before {
+      background: #888
+    }
+
+    .timeline-item {
+      padding-bottom: 8px
+    }
+
+    .dot {
+      background: #333;
+      border: 2px solid #bbb;
+      width: 11px;
+      height: 11px;
+      top: 4px
+    }
+
+    .dot.pending {
+      background: #fff;
+      border-color: #666
+    }
+
+    .milestone {
+      padding-bottom: 7px;
+      border-bottom: 1px solid #bbb;
+      gap: 12px
+    }
+
+    .milestone p {
+      color: #333;
+      font-size: 11px;
+      margin: 2px 0 0
+    }
+
+    .stage-static-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px
+    }
+
+    .state {
+      font-size: 9px;
+      color: #222;
+      border: 1px solid #777;
+      padding: 2px 5px;
+      border-radius: 0
+    }
+
+    .state.pending {
+      color: #333;
+      border-color: #999
+    }
+
+    .toolbar {
+      margin: 2px 0 9px
+    }
+
+    .toolbar input {
+      background: #fff;
+      color: #111;
+      border: 1px solid #777;
+      border-radius: 0;
+      padding: 7px 8px;
+      font-size: 11px
+    }
+
+    .toolbar input::placeholder {
+      color: #555
+    }
+
+    .results {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 24px
+    }
+
+    .group {
+      margin-bottom: 12px
+    }
+
+    .group h3 {
+      font-family: Georgia, "Times New Roman", serif;
+      color: #222;
+      font-size: 11px;
+      letter-spacing: .04em;
+      margin-bottom: 2px;
+      padding-bottom: 3px;
+      border-bottom: 1px solid #999
+    }
+
+    .entry {
+      gap: 9px;
+      padding: 6px 0;
+      border-bottom: 1px solid #ddd;
+      align-items: center
+    }
+
+    .entry-info strong {
+      font-size: 11px;
+      font-weight: 700;
+      line-height: 1.3
+    }
+
+    .meta {
+      font-size: 10px;
+      color: #444;
+      margin-top: 1px
+    }
+
+    .proof {
+      border: 1px solid #555;
+      border-radius: 2px;
+      background: #f4f4f4;
+      color: #111;
+      padding: 4px 7px;
+      font-size: 10px;
+      font-weight: 700
+    }
+
+    .proof:hover {
+      background: #e7e7e7;
+      border-color: #111
+    }
+
+    .skills {
+      gap: 4px
+    }
+
+    .skill {
+      border: 1px solid #999;
+      background: #fafafa;
+      padding: 3px 6px;
+      border-radius: 0;
+      font-size: 10px;
+      color: #222
+    }
+
+    .project-note {
+      color: #333;
+      font-size: 11px
+    }
+
+    .footer {
+      padding-top: 14px;
+      color: #555;
+      font-size: 10px
+    }
+
+    .modal {
+      background: #0009
+    }
+
+    .dialog {
+      background: #fff;
+      border: 1px solid #444;
+      border-radius: 2px
+    }
+
+    .modalhead {
+      background: #f2f2f2;
+      border-bottom: 1px solid #aaa
+    }
+
+    .modalhead strong {
+      color: #111
+    }
+
+    .modalhead button {
+      border: 1px solid #777;
+      background: #fff;
+      color: #111;
+      border-radius: 2px
+    }
+
+    .viewer {
+      background: #fff
+    }
+
+    .notice {
+      color: #222
+    }
+
+    .notice h3 {
+      color: #111
+    }
+
+    .notice code {
+      background: #eee;
+      color: #111
+    }
+
+    .notice a {
+      color: #111;
+      text-decoration: underline
+    }
+
+    .detail-meta {
+      color: #333;
+      font-size: 12px;
+      margin: 5px 0 12px
+    }
+
+    .detail-panel {
+      padding: 20px;
+      overflow: auto
+    }
+
+    .detail-panel h3 {
+      font-size: 16px;
+      margin: 0;
+      color: #111
+    }
+
+    .detail-panel p {
+      margin: 0 0 12px;
+      color: #333
+    }
+
+    .detail-actions {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap
+    }
+
+    .detail-actions button {
+      cursor: pointer
+    }
+
+    @media(max-width:900px) {
+      main {
+        margin: 0 auto;
+        padding: 0 20px 35px
+      }
+
+      .results {
+        grid-template-columns: 1fr 1fr
+      }
+    }
+
+    @media(max-width:650px) {
+      main {
+        padding: 0 12px 30px
+      }
+
+      .page-head {
+        padding: 16px 0 10px
+      }
+
+      .page-head h1 {
+        font-size: 23px
+      }
+
+      .head-actions {
+        justify-content: center
+      }
+
+      .overview-grid {
+        grid-template-columns: 1fr
+      }
+
+      .facts {
+        border-left: 0;
+        border-top: 1px solid #aaa;
+        padding: 8px 0 0;
+        grid-template-columns: 1fr 1fr
+      }
+
+      .results {
+        grid-template-columns: 1fr
+      }
+
+      .entry {
+        gap: 7px
+      }
+
+      .proof {
+        white-space: nowrap;
+        padding: 4px 6px;
+        font-size: 9px
+      }
+
+      .section-head h2 {
+        font-size: 14px
+      }
+
+      .section-count {
+        font-size: 9px
+      }
+
+      .modal {
+        padding: 0
+      }
+
+      .dialog {
+        height: 100dvh;
+        width: 100%;
+        border-radius: 0
+      }
+
+      .notice {
+        padding: 18px
+      }
+    }
+
+    @media print {
+
+      .head-actions,
+      .toolbar,
+      .proof,
+      .modal,
+      .sidebar,
+      .mobile-head {
+        display: none !important
+      }
+
+      main {
+        max-width: none;
+        margin: 0;
+        padding: 0 8mm
+      }
+
+      .page-head {
+        padding-top: 0
+      }
+
+      section.content-section {
+        break-inside: avoid
+      }
+
+      .entry {
+        break-inside: avoid
+      }
+    }
+
+    .course-group-heading {
+      font-size: .94rem;
+      font-weight: 650;
+      margin: 1rem 0 .35rem;
+      padding-bottom: .3rem;
+      border-bottom: 1px solid var(--border, #ddd)
+    }
+
+    .course-subgroup {
+      margin: 14px 0 18px;
+      padding-left: 12px;
+      border-left: 2px solid #d9e0e7
+    }
+
+    .course-subgroup h4 {
+      font-size: .95rem;
+      margin: 0 0 10px;
+      color: #374151;
+      font-weight: 650
+    }
+
+
+
+    /* Enlarge desktop text and rem-based spacing without scaling popup layers */
+    @media (min-width: 1024px) {
+      html {
+        font-size: 150%;
+      }
+
+      body {
+        font-size: 1rem;
+      }
+    }
+  </style>
+
+  <style id="index-desktop-zoom">
+    @media (min-width: 1024px) {
+      body {
+        zoom: 1.7;
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="app">
+    <aside class="sidebar" aria-label="Main navigation">
+      <div class="brand"><strong>Lokagagan K S</strong><span>Academic portfolio</span></div>
+      <div class="nav-label">Portfolio</div>
+      <nav class="nav">
+        <a href="#overview" class="active">Overview</a><a href="#education">Education</a><a href="#courses">Courses &
+          training</a><a href="#projects">Projects</a><a href="#achievements">Achievements</a><a
+          href="#certificates">Certificates</a>
+      </nav>
+      <div class="sidebar-foot">Resume · Supporting documents</div>
+    </aside>
+    <div class="mobile-head"><strong>Resume</strong><select id="mobileNav" aria-label="Navigate to section">
+        <option value="#education">Education</option>
+        <option value="#courses">Courses & training</option>
+        <option value="#projects">Projects</option>
+        <option value="#achievements">Achievements</option>
+        <option value="#certificates">Certificates</option>
+      </select></div>
+    <main>
+      <header class="page-head" id="overview">
+        <div>
+
+          <h1>LOKAGAGAN K S</h1>
+          <div class="contact"><a href="mailto:lokagaganks@gmail.com">lokagaganks@gmail.com</a><a
+              href="tel:+918123492116">+91 81234 92116</a></div>
+        </div>
+        <div class="head-actions"><a class="btn primary" href="resume.pdf" target="_blank" rel="noopener">Open resume
+            PDF ↗</a><a class="btn" href="#education">View education ↓</a></div>
+      </header>
+      <section class="content-section" id="education">
+        <div class="section-head">
+          <div>
+            <h2>Education</h2>
+            <p>Qualifications and the IIT Madras programme pathway.</p>
+          </div>
+        </div>
+        <div id="educationList"></div>
+        <div style="margin-top:22px;padding-top:18px;border-top:1px solid var(--line)">
+          <div class="degree-head">
+            <div>
+              <h3>BS in Data Science and Applications</h3>
+              <p>IIT Madras · Academic milestones recorded to date</p>
+            </div>
+          </div>
+          <div class="timeline" id="degreeTimeline"></div>
+        </div>
+      </section>
+      <section class="content-section" id="courses">
+        <div class="section-head">
+          <div>
+            <h2>Courses & training</h2>
+            <p>Structured learning and professional development.</p>
+          </div>
+        </div>
+        <div id="courseList"></div>
+      </section>
+      <section class="content-section" id="projects">
+        <div class="section-head">
+          <div>
+            <h2>Projects</h2>
+            <p>Selected development and applied data work from the resume.</p>
+          </div>
+        </div>
+        <div id="projectList"></div>
+      </section>
+      <section class="content-section" id="achievements">
+        <div class="section-head">
+          <div>
+            <h2>Achievements & activities</h2>
+            <p>A structured record of awards, volunteering, activities, and leadership.</p>
+          </div>
+        </div>
+        <div id="achievementList"></div>
+      </section>
+      <section class="content-section" id="certificates">
+        <div class="section-head">
+          <div>
+            <h2>Certificates & evidence</h2>
+            <p>Search all listed records and open their proof status.</p>
+          </div>
+        </div>
+        <div class="toolbar">
+          <div class="section-count" id="resultCount" aria-live="polite"></div><input id="search" type="search"
+            placeholder="Search titles, institutions, details…" aria-label="Search portfolio records">
+        </div>
+        <div class="results" id="allRecords"></div>
+      </section>
+      <div class="footer">Personal portfolio · Documents are only shown when the original PDF is present.</div>
+    </main>
+  </div>
+  <div class="modal" id="detailModal" role="dialog" aria-modal="true" aria-labelledby="detailTitle">
+    <div class="dialog">
+      <div class="modalhead"><strong id="detailModalTitle">Record details</strong><button type="button"
+          id="closeDetail">Close</button></div>
+      <div class="detail-panel" id="detailPanel"></div>
+    </div>
+  </div>
+  <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="dialog">
+      <div class="modalhead"><strong id="modalTitle">Supporting document</strong><button id="closeModal"
+          type="button">Close ✕</button></div>
+      <div class="viewer" id="viewer"></div>
+    </div>
+  </div>
+  <script>
+    const items = [{ "category": "Education", "title": "BS — Data Science and Applications", "meta": "IIT Madras · 2024–Present · 8.03 CGPA", "folder": "education/iit_madras_bs_data_science" }, { "category": "Education", "title": "BSc — Mathematics & Statistics", "meta": "Nrupathunga University · 2021–2024 · 9.33 CGPA", "folder": "degrees/bsc_mathematics_statistics" }, { "category": "Education", "title": "BA — Economics Honours", "meta": "IGNOU · 2022–2025 · 71.27%", "folder": "degrees/ba_economics_honours" }, { "category": "Education", "title": "Class XII", "meta": "JNV Chikkaballapura · CBSE · 2021 · 93.8%", "folder": "education/class_xii" }, { "category": "Education", "title": "Class X", "meta": "JNV Chikkaballapura · CBSE · 2019 · 92.2%", "folder": "education/class_x" }, { "category": "Projects", "title": "Trek Management Application", "meta": "Flask · SQLite · SQLAlchemy · June–July 2026", "folder": "projects/trek_management" }, { "category": "Projects", "title": "Placement Portal v2", "meta": "Flask · Vue.js · REST API · July–August 2026", "folder": "projects/placement_portal" }, { "category": "Projects", "title": "Business Data Management — Sri Maruthi Pharma", "meta": "February–April 2026", "folder": "projects/sri_maruthi_pharma" }, { "category": "Projects", "title": "Machine Learning — Scikit-learn", "meta": "September–December 2025", "folder": "projects/machine_learning" }, { "category": "Volunteering", "title": "Campus 2 Community — Yuvaka Sangha", "meta": "April 2024", "folder": "volunteering/campus_2_community" }, { "category": "Volunteering", "title": "Youth For Parivarthan", "meta": "November 2022", "folder": "experience/youth_for_parivarthan" }, { "category": "Awards", "title": "Mathematics Quiz — Third Prize", "meta": "December 2022", "folder": "achievements/mathematics_quiz_third_prize" }, { "category": "Awards", "title": "Mathematics via Vegetable Carving — Second Place", "meta": "December 2022", "folder": "achievements/mathematics_via_vegetable_carving_second_place" }, { "category": "Activities", "title": "National Statistics Day Essay Competition", "meta": "NSSO · June 2023", "folder": "achievements/national_statistics_day_essay_competition" }, { "category": "Activities", "title": "Vedic Mathematics Workshop", "meta": "December 2023", "folder": "achievements/vedic_mathematics_workshop" }, { "category": "Leadership", "title": "Waste Management Club", "meta": "2022–2023", "folder": "leadership/waste_management_club" }, { "category": "Leadership", "title": "Water Conservation Survey", "meta": "BWSSB · April 2024", "folder": "leadership/water_conservation_survey" }, { "category": "Leadership", "title": "Aravali House Vice Captain", "meta": "2020", "folder": "leadership/aravali_house_vice_captain" }, { "category": "Certifications", "title": "Business Intelligence & Analytics", "meta": "IIT Madras · NPTEL · Jan–Apr 2026", "folder": "certifications/business_intelligence_analytics" }, { "category": "Certifications", "title": "Getting Started with Competitive Programming", "meta": "IIT Gandhinagar · NPTEL · January–April 2026", "folder": "certifications/getting_started_with_competitive_programming" }, { "category": "Certifications", "title": "Marketing Management", "meta": "IIM Bengaluru · SWAYAM · July–December 2025", "folder": "certifications/marketing_management" }, { "category": "Certifications", "title": "Organizational Design", "meta": "IIM Bengaluru · SWAYAM · July–December 2025", "folder": "certifications/organizational_design" }, { "category": "Certifications", "title": "Operations Management", "meta": "IIM Bengaluru · SWAYAM · July–December 2025", "folder": "certifications/operations_management" }, { "category": "Certifications", "title": "Digital Transformation: Theory and Applications", "meta": "IIM Ahmedabad · SWAYAM · July–December 2025", "folder": "certifications/digital_transformation_theory_and_applications" }, { "category": "Certifications", "title": "Generative AI and Large Language Models", "meta": "IIM Bengaluru · SWAYAM · July–December 2024", "folder": "certifications/generative_ai_and_large_language_models" }, { "category": "Certifications", "title": "Mastering Deep Learning", "meta": "IIM Bengaluru · SWAYAM · July–December 2024", "folder": "certifications/mastering_deep_learning" }, { "category": "Certifications", "title": "Data-Driven Marketing Decision Making", "meta": "IIM Visakhapatnam · SWAYAM · July–December 2024", "folder": "certifications/data_driven_marketing_decision_making" }, { "category": "Certifications", "title": "Financial Accounting and Analysis", "meta": "IIM Bengaluru · SWAYAM · January–April 2024", "folder": "certifications/financial_accounting_and_analysis" }, { "category": "Certifications", "title": "Introduction to Banking and Financial Markets", "meta": "IIM Bengaluru · SWAYAM · January–April 2024", "folder": "certifications/introduction_to_banking_and_financial_markets" }, { "category": "Certifications", "title": "Equity Stock Market", "meta": "IIM Bengaluru · SWAYAM · January–April 2024", "folder": "certifications/equity_stock_market" }, { "category": "Certifications", "title": "Foreign Exchange Market", "meta": "IIM Bengaluru · SWAYAM · January–April 2024", "folder": "certifications/foreign_exchange_market" }, { "category": "Certifications", "title": "New Age Business Models", "meta": "IIM Bengaluru · SWAYAM · January–April 2024", "folder": "certifications/new_age_business_models" }, { "category": "Certifications", "title": "Probability and Statistical Inference", "meta": "January–April 2024", "group": "Essentials of Data Science with R Software · IIT Kanpur · NPTEL", "folder": "certifications/probability_statistical_inference" }, { "category": "Certifications", "title": "Sampling Theory and Linear Regression Analysis", "meta": "January–April 2024", "group": "Essentials of Data Science with R Software · IIT Kanpur · NPTEL", "folder": "certifications/sampling_linear_regression" }, { "category": "Training", "title": "Magic Bus Livelihood Programme", "meta": "March–April 2024", "folder": "certifications/magic_bus_livelihood_programme" }, { "category": "Training", "title": "General Entrepreneurship Development Programme", "meta": "RSETI · July 2023", "folder": "certifications/general_entrepreneurship_development_programme" }];
+    const stages = [{ "title": "Foundation", "date": "April 2025", "status": "Completed", "folder": "foundation", "detail": "Foundation Level · IIT Madras" }, { "title": "Diploma in Data Science", "date": "April 2026", "status": "Completed", "folder": "diploma_data_science", "detail": "Diploma Level · IIT Madras" }, { "title": "Diploma in Programming", "date": "September 2026", "status": "Completed", "folder": "diploma_programming", "detail": "Diploma Level · IIT Madras" }, { "title": "BSc level", "date": "", "status": "In Progress", "folder": "", "detail": "BSc Degree level in progress" }, { "title": "BS degree level", "date": "", "status": "In Progress", "folder": "", "detail": "BS Degree level in progress" }];
+    const groups = { education: ["Education"], courses: ["Certifications", "Training"], projects: ["Projects"], achievements: ["Volunteering", "Awards", "Activities", "Leadership"] };
+    const proofFiles = { "education/class_x": "education/class_x/10markscard 4095376  loka.pdf", "education/class_xii": "education/class_xii/12markscard 18601971 loka.pdf", "degrees/bsc_mathematics_statistics": "degrees/bsc_mathematics_statistics/bsc maths and statistics degeree certifiacte.pdf", "degrees/ba_economics_honours": "degrees/ba_economics_honours/ignou ba economics marks degree.pdf", "education/ignou_ba_economics": "degrees/ba_economics_honours/ignou ba economics marks degree.pdf", "education/nrupathunga_bsc_math_statistics": "degrees/bsc_mathematics_statistics/bsc maths and statistics degeree certifiacte.pdf", "education/iit_madras_bs_data_science": "degrees/bs_data_science/foundation/iitm foudation.pdf", "degrees/bs_data_science/foundation": "degrees/bs_data_science/foundation/iitm foudation.pdf", "degrees/bs_data_science/diploma_data_science": "degrees/bs_data_science/diploma_data_science/Diploma in Data Science.pdf", "degrees/bs_data_science/diploma_programming": "degrees/bs_data_science/diploma_programming/Diploma in Programming.pdf", "degrees/bs_data_science/semester_marksheet": "degrees/bs_data_science/semester_marksheet/NUsemwise U24AN21S0527 loka.pdf", "certifications/business_intelligence_analytics": "certifications/business_intelligence_analytics/Business Intelligence & Analytics.pdf", "certifications/nptel_iitm_business_intelligence_analytics": "certifications/business_intelligence_analytics/Business Intelligence & Analytics.pdf", "certifications/data_driven_marketing_decision_making": "certifications/data_driven_marketing_decision_making/Data-Driven Marketing Decision Making.pdf", "certifications/swayam_data_driven_marketing": "certifications/data_driven_marketing_decision_making/Data-Driven Marketing Decision Making.pdf", "certifications/digital_transformation_theory_and_applications": "certifications/digital_transformation_theory_and_applications/Digital Transformation Theory and Applications.pdf", "certifications/swayam_digital_transformation": "certifications/digital_transformation_theory_and_applications/Digital Transformation Theory and Applications.pdf", "certifications/equity_stock_market": "certifications/equity_stock_market/Equity Stock Market.pdf", "certifications/swayam_equity_stock_market": "certifications/equity_stock_market/Equity Stock Market.pdf", "certifications/financial_accounting_and_analysis": "certifications/financial_accounting_and_analysis/Financial Accounting and Analysis.pdf", "certifications/swayam_financial_accounting": "certifications/financial_accounting_and_analysis/Financial Accounting and Analysis.pdf", "certifications/foreign_exchange_market": "certifications/foreign_exchange_market/Foreign Exchange market.pdf", "certifications/swayam_foreign_exchange_market": "certifications/foreign_exchange_market/Foreign Exchange market.pdf", "certifications/generative_ai_and_large_language_models": "certifications/generative_ai_and_large_language_models/Generative AI and Large Language Models.pdf", "certifications/swayam_genai_llms": "certifications/generative_ai_and_large_language_models/Generative AI and Large Language Models.pdf", "certifications/getting_started_with_competitive_programming": "certifications/getting_started_with_competitive_programming/Getting Started with Competitive Programming.pdf", "certifications/nptel_iitg_competitive_programming": "certifications/getting_started_with_competitive_programming/Getting Started with Competitive Programming.pdf", "certifications/introduction_to_banking_and_financial_markets": "certifications/introduction_to_banking_and_financial_markets/Introduction to Banking and Financial Markets.pdf", "certifications/swayam_banking_financial_markets": "certifications/introduction_to_banking_and_financial_markets/Introduction to Banking and Financial Markets.pdf", "certifications/magic_bus_livelihood_programme": "certifications/magic_bus_livelihood_programme/magisbus livelihood MSDF certificate.pdf", "certifications/marketing_management": "certifications/marketing_management/Marketing Management.pdf", "certifications/swayam_marketing_management": "certifications/marketing_management/Marketing Management.pdf", "certifications/mastering_deep_learning": "certifications/mastering_deep_learning/Mastering Deep Learning.pdf", "certifications/swayam_mastering_deep_learning": "certifications/mastering_deep_learning/Mastering Deep Learning.pdf", "certifications/new_age_business_models": "certifications/new_age_business_models/New Age Business Models.pdf", "certifications/swayam_new_age_business_models": "certifications/new_age_business_models/New Age Business Models.pdf", "certifications/operations_management": "certifications/operations_management/Operations Management.pdf", "certifications/swayam_operations_management": "certifications/operations_management/Operations Management.pdf", "certifications/organizational_design": "certifications/organizational_design/Organizational Design.pdf", "certifications/swayam_organizational_design": "certifications/organizational_design/Organizational Design.pdf", "certifications/probability_statistical_inference": "certifications/probability_statistical_inference/Essentials Of Data Science With R Software - 1_ Probability And Statistical Inference.pdf", "certifications/sampling_linear_regression": "certifications/sampling_linear_regression/Essentials Of Data Science With R Software - 2_ Sampling Theory And Linear Regression Analysis.pdf", "certifications/general_entrepreneurship_development_programme": "certifications/general_entrepreneurship_development_programme/RSETI certificate.pdf", "achievements/mathematics_quiz_third_prize": "achievements/mathematics_quiz_third_prize/maths quiz.pdf", "achievements/mathematics_via_vegetable_carving_second_place": "achievements/mathematics_via_vegetable_carving_second_place/vegetable craving.pdf", "achievements/national_statistics_day_essay_competition": "achievements/national_statistics_day_essay_competition/NSSO Essay competition.pdf", "achievements/vedic_mathematics_workshop": "achievements/vedic_mathematics_workshop/Vedic Mathematics Certificate.pdf", "activities/statistics_day_essay": "achievements/national_statistics_day_essay_competition/NSSO Essay competition.pdf", "activities/vedic_mathematics": "achievements/vedic_mathematics_workshop/Vedic Mathematics Certificate.pdf", "awards/mathematics_quiz": "achievements/mathematics_quiz_third_prize/maths quiz.pdf", "awards/vegetable_carving": "achievements/mathematics_via_vegetable_carving_second_place/vegetable craving.pdf", "experience/youth_for_parivarthan": "experience/youth_for_parivarthan/Youth for parivarthan internship.pdf", "training/general_edp": "certifications/general_entrepreneurship_development_programme/RSETI certificate.pdf", "training/magic_bus_livelihood": "certifications/magic_bus_livelihood_programme/magisbus livelihood MSDF certificate.pdf" };
+    const stageProofFiles = { "foundation": "degrees/bs_data_science/foundation/iitm foudation.pdf", "diploma_data_science": "degrees/bs_data_science/diploma_data_science/Diploma in Data Science.pdf", "diploma_programming": "degrees/bs_data_science/diploma_programming/Diploma in Programming.pdf", "semester_marksheet": "degrees/bs_data_science/semester_marksheet/NUsemwise U24AN21S0527 loka.pdf" };
+    const $ = id => document.getElementById(id);
+    function safeText(s) { return String(s ?? "") }
+    function makeEntry(x) {
+      const row = document.createElement("div"); row.className = "entry";
+      const info = document.createElement("div"); info.className = "entry-info";
+      const title = document.createElement("strong"); title.textContent = x.title;
+      const meta = document.createElement("div"); meta.className = "meta"; meta.textContent = x.meta;
+      info.append(title, meta);
+      const link = document.createElement("a"); link.className = "btn proof"; link.href = "details/" + (x.title.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")) + ".html";
+      link.textContent = ["Foundation", "Diploma in Data Science", "Diploma in Programming"].includes(x.title) ? "View certificate" : "View details";
+      link.setAttribute("aria-label", "View details for " + x.title);
+      row.append(info, link); return row
+    }
+    function renderGroups(targetId, data, allowed) {
+      const target = $(targetId); target.innerHTML = "";
+      const filtered = data.filter(x => allowed.includes(x.category));
+      if (!filtered.length) { target.innerHTML = '<p class="empty">No records in this section.</p>'; return }
+      const cats = [...new Set(filtered.map(x => x.category))];
+      cats.forEach(cat => {
+        const group = document.createElement("div"); group.className = "group";
+        const h = document.createElement("h3"); h.textContent = cat; group.append(h);
+        const catItems = filtered.filter(x => x.category === cat);
+        const subgroupNames = [...new Set(catItems.map(x => x.group).filter(Boolean))];
+        subgroupNames.forEach(name => {
+          const sub = document.createElement("div"); sub.className = "course-subgroup";
+          const sh = document.createElement("h3"); sh.textContent = name; sub.append(sh);
+          catItems.filter(x => x.group === name).forEach(x => sub.append(makeEntry(x)));
+          group.append(sub);
+        });
+        catItems.filter(x => !x.group).forEach(x => group.append(makeEntry(x)));
+        target.append(group);
+      });
+    }
+    function renderTimeline() {
+      const target = $("degreeTimeline"); target.innerHTML = "";
+      stages.forEach(s => {
+        const item = document.createElement("div"); item.className = "timeline-item";
+        const dot = document.createElement("span"); dot.className = "dot" + (s.status === "Completed" ? "" : " pending"); dot.setAttribute("aria-hidden", "true");
+        const body = document.createElement("div"); body.className = "milestone";
+        const title = document.createElement("strong"); title.textContent = s.title;
+        const desc = document.createElement("p"); desc.textContent = s.detail + (s.date ? " · Completed " + s.date : " · " + s.status);
+        const status = document.createElement("span"); status.className = "state" + (s.status === "Completed" ? "" : " pending"); status.textContent = s.status;
+        const header = document.createElement("div"); header.className = "stage-static-head";
+        header.append(title, status); body.append(header, desc);
+        if (["Foundation", "Diploma in Data Science", "Diploma in Programming"].includes(s.title)) {
+          const certLink = document.createElement("a"); certLink.className = "btn proof";
+          certLink.href = "details/bs-data-science-and-applications.html#" + ({ "Foundation": "foundation", "Diploma in Data Science": "diploma-in-data-science", "Diploma in Programming": "diploma-in-programming", "BSc level": "bsc-level", "BS degree level": "bs-degree-level" }[s.title] || "bs-data-science-proof");
+          certLink.textContent = "View certificate"; certLink.setAttribute("aria-label", "View certificate for " + s.title);
+          body.append(certLink);
+        }
+        item.append(dot, body); target.append(item);
+      });
+    }
+    function renderSearch(q = "") {
+      const target = $("allRecords"); target.innerHTML = "";
+      const found = items.filter(x => (x.title + " " + x.meta + " " + x.category + " " + (x.group || "")).toLowerCase().includes(q.toLowerCase()));
+      $("resultCount").textContent = found.length + " records";
+      if (!found.length) { target.innerHTML = '<p class="empty">No matching records. Try a different search term.</p>'; return }
+      const cats = [...new Set(found.map(x => x.category))];
+      cats.forEach(cat => {
+        const group = document.createElement("div"); group.className = "group";
+        const h = document.createElement("h3"); h.textContent = cat; group.append(h);
+        const catItems = found.filter(x => x.category === cat);
+        const subgroupNames = [...new Set(catItems.map(x => x.group).filter(Boolean))];
+        subgroupNames.forEach(name => {
+          const sub = document.createElement("div"); sub.className = "course-subgroup";
+          const sh = document.createElement("h4"); sh.textContent = name; sub.append(sh);
+          catItems.filter(x => x.group === name).forEach(x => sub.append(makeEntry(x)));
+          group.append(sub);
+        });
+        catItems.filter(x => !x.group).forEach(x => group.append(makeEntry(x)));
+        target.append(group);
+      });
+    }
+    function openDetails(x) {
+      const modal = $("detailModal"), panel = $("detailPanel"); panel.innerHTML = "";
+      $("detailModalTitle").textContent = x.title;
+      const h = document.createElement("h3"); h.id = "detailTitle"; h.textContent = x.title;
+      const meta = document.createElement("p"); meta.className = "detail-meta"; meta.textContent = x.meta;
+      const description = document.createElement("p"); description.textContent = "The institution, course provider, and date or duration shown above are taken from the resume. Supporting proof is available when an original PDF has been added.";
+      const actions = document.createElement("div"); actions.className = "detail-actions";
+      const proof = document.createElement("button"); proof.className = "btn primary"; proof.type = "button"; proof.textContent = "View proof PDF";
+      proof.addEventListener("click", () => { modal.classList.remove("open"); openPdfOrNotice(x.title, "proofs/" + (proofFiles[x.folder] || x.folder + "/README.txt"), "proofs/" + x.folder, x.meta) });
+      panel.append(h, meta, description, actions); actions.append(proof);
+      modal.classList.add("open"); document.body.style.overflow = "hidden"; $("closeDetail").focus();
+    }
+    function closeDetails() { $("detailModal").classList.remove("open"); document.body.style.overflow = ""; }
+    async function openPdfOrNotice(title, url, folder, statusText) { $("modalTitle").textContent = title; const viewer = $("viewer"); viewer.innerHTML = ""; $("modal").classList.add("open"); document.body.style.overflow = "hidden"; $("closeModal").focus(); try { const response = await fetch(url, { method: "HEAD" }); if (response.ok) { const iframe = document.createElement("iframe"); iframe.title = title + " PDF"; iframe.src = url + "#view=FitH"; viewer.append(iframe) } else { showNotice(title, folder, statusText) } } catch (e) { showNotice(title, folder, statusText) } }
+    function showNotice(title, folder, statusText) { const viewer = $("viewer"); viewer.innerHTML = ""; const box = document.createElement("div"); box.className = "notice"; const h = document.createElement("h3"); h.textContent = "No proof PDF added yet"; const p = document.createElement("p"); p.textContent = title + " · " + statusText; const p2 = document.createElement("p"); p2.textContent = "If you have the original document, place it in this dedicated folder and name it exactly:"; const code = document.createElement("code"); code.textContent = (proofFiles[folder] || folder + "/README.txt"); const p3 = document.createElement("p"); p3.textContent = "The website does not create or claim to have a certificate when no original PDF is present."; box.append(h, p, p2, code, p3); viewer.append(box) }
+    function showProof(x) { openPdfOrNotice(x.title, "proofs/" + (proofFiles[x.folder] || x.folder + "/README.txt"), "proofs/" + x.folder, x.meta) }
+    function showStageProof(s) { openPdfOrNotice(s.title, "proofs/" + (stageProofFiles[s.folder] || ("degrees/bs_data_science/" + s.folder + "/README.txt")), "proofs/degrees/bs_data_science/" + s.folder, s.status + " · " + s.date) }
+    function closeModal() { $("modal").classList.remove("open"); $("viewer").innerHTML = ""; document.body.style.overflow = ""; lastFocus?.focus() }
+    let lastFocus = null; document.addEventListener("click", e => { const b = e.target.closest("button.proof"); if (b) lastFocus = b });
+    $("closeModal").addEventListener("click", closeModal); $("closeDetail").addEventListener("click", closeDetails); $("detailModal").addEventListener("click", e => { if (e.target === $("detailModal")) closeDetails() }); $("modal").addEventListener("click", e => { if (e.target === $("modal")) closeModal() }); document.addEventListener("keydown", e => { if (e.key === "Escape" && $("modal").classList.contains("open")) closeModal(); else if (e.key === "Escape" && $("detailModal").classList.contains("open")) closeDetails() });
+    $("search").addEventListener("input", e => renderSearch(e.target.value)); $("mobileNav").addEventListener("change", e => location.hash = e.target.value.slice(1));
+    const navLinks = [...document.querySelectorAll(".nav a")]; const observer = new IntersectionObserver(entries => { entries.forEach(entry => { if (entry.isIntersecting) { navLinks.forEach(a => a.classList.toggle("active", a.hash === "#" + entry.target.id)) } }) }, { rootMargin: "-20% 0px -65% 0px" });["overview", "education", "courses", "projects", "achievements", "certificates"].forEach(id => { const el = $(id); if (el) observer.observe(el) }); navLinks.forEach(a => a.addEventListener("click", () => { navLinks.forEach(x => x.classList.remove("active")); a.classList.add("active") }));
+    renderGroups("educationList", items, groups.education); renderGroups("courseList", items, groups.courses); renderGroups("projectList", items, groups.projects); renderGroups("achievementList", items, groups.achievements); renderTimeline(); renderSearch();
+  </script>
+</body>
+
+</html>
