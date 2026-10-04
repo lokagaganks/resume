@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PDF.js Viewer</title>
+<style>
+html,body{margin:0;height:100%;background:#525659;font:14px/1.4 system-ui,sans-serif}
+.notice{box-sizing:border-box;height:42px;padding:10px 14px;background:#323639;color:#fff}
+.notice a{color:#b8d9ff}
+#viewer{display:block;width:100%;height:calc(100% - 42px);border:0}
+</style>
+</head>
+<body>
+<div class="notice">PDF.js viewer · <a id="direct" href="#">Open PDF directly</a></div>
+<iframe id="viewer" title="PDF.js document viewer" allowfullscreen></iframe>
+<script>
+(function(){
+  const params = new URLSearchParams(location.search);
+  const file = params.get("file");
+  const link = document.getElementById("direct");
+  const viewer = document.getElementById("viewer");
+  if (!file) { document.querySelector(".notice").textContent = "No PDF file specified."; return; }
+  link.href = file;
+  const absoluteFile = new URL(file, location.href).href;
+  viewer.src = "https://mozilla.github.io/pdf.js/web/viewer.html?file=" + encodeURIComponent(absoluteFile);
+})();
+</script>
+</body>
+</html>
