@@ -1,0 +1,40 @@
+Put each PDF at exactly this path (relative to the site root):
+
+proofs/leadership/aravali_house_vice_captain/proof.pdf    <- details/aravali-house-vice-captain.html
+proofs/degrees/ba_economics_honours/ignou ba economics marks degree.pdf    <- details/ba-economics-honours.html
+proofs/degrees/bs_data_science/foundation/iitm foudation.pdf    <- details/bs-data-science-and-applications.html
+proofs/degrees/bs_data_science/diploma_data_science/Diploma in Data Science.pdf    <- details/bs-data-science-and-applications.html
+proofs/degrees/bs_data_science/diploma_programming/Diploma in Programming.pdf    <- details/bs-data-science-and-applications.html
+proofs/degrees/bsc_mathematics_statistics/bsc maths and statistics degeree certifiacte.pdf    <- details/bsc-mathematics-statistics.html
+proofs/projects/sri_maruthi_pharma/proof.pdf    <- details/business-data-management-sri-maruthi-pharma.html
+proofs/certifications/business_intelligence_analytics/Business Intelligence & Analytics.pdf    <- details/business-intelligence-analytics.html
+proofs/volunteering/campus_2_community/proof.pdf    <- details/campus-2-community-yuvaka-sangha.html
+proofs/education/class_x/10markscard 4095376  loka.pdf    <- details/class-x.html
+proofs/education/class_xii/12markscard 18601971 loka.pdf    <- details/class-xii.html
+proofs/certifications/data_driven_marketing_decision_making/Data-Driven Marketing Decision Making.pdf    <- details/data-driven-marketing-decision-making.html
+proofs/certifications/digital_transformation_theory_and_applications/Digital Transformation Theory and Applications.pdf    <- details/digital-transformation-theory-and-applications.html
+proofs/certifications/equity_stock_market/Equity Stock Market.pdf    <- details/equity-stock-market.html
+proofs/certifications/financial_accounting_and_analysis/Financial Accounting and Analysis.pdf    <- details/financial-accounting-and-analysis.html
+proofs/certifications/foreign_exchange_market/Foreign Exchange market.pdf    <- details/foreign-exchange-market.html
+proofs/certifications/general_entrepreneurship_development_programme/RSETI certificate.pdf    <- details/general-entrepreneurship-development-programme.html
+proofs/certifications/generative_ai_and_large_language_models/Generative AI and Large Language Models.pdf    <- details/generative-ai-and-large-language-models.html
+proofs/certifications/getting_started_with_competitive_programming/Getting Started with Competitive Programming.pdf    <- details/getting-started-with-competitive-programming.html
+proofs/certifications/introduction_to_banking_and_financial_markets/Introduction to Banking and Financial Markets.pdf    <- details/introduction-to-banking-and-financial-markets.html
+proofs/projects/machine_learning/proof.pdf    <- details/machine-learning-scikit-learn.html
+proofs/certifications/magic_bus_livelihood_programme/magisbus livelihood MSDF certificate.pdf    <- details/magic-bus-livelihood-programme.html
+proofs/certifications/marketing_management/Marketing Management.pdf    <- details/marketing-management.html
+proofs/certifications/mastering_deep_learning/Mastering Deep Learning.pdf    <- details/mastering-deep-learning.html
+proofs/achievements/mathematics_quiz_third_prize/maths quiz.pdf    <- details/mathematics-quiz-third-prize.html
+proofs/achievements/mathematics_via_vegetable_carving_second_place/vegetable craving.pdf    <- details/mathematics-via-vegetable-carving-second-place.html
+proofs/achievements/national_statistics_day_essay_competition/NSSO Essay competition.pdf    <- details/national-statistics-day-essay-competition.html
+proofs/certifications/new_age_business_models/New Age Business Models.pdf    <- details/new-age-business-models.html
+proofs/certifications/operations_management/Operations Management.pdf    <- details/operations-management.html
+proofs/certifications/organizational_design/Organizational Design.pdf    <- details/organizational-design.html
+proofs/projects/placement_portal/proof.pdf    <- details/placement-portal-v2.html
+proofs/certifications/probability_statistical_inference/Essentials Of Data Science With R Software - 1_ Probability And Statistical Inference.pdf    <- details/probability-and-statistical-inference.html
+proofs/certifications/sampling_linear_regression/Essentials Of Data Science With R Software - 2_ Sampling Theory And Linear Regression Analysis.pdf    <- details/sampling-theory-and-linear-regression-analysis.html
+proofs/projects/trek_management/proof.pdf    <- details/trek-management-application.html
+proofs/achievements/vedic_mathematics_workshop/Vedic Mathematics Certificate.pdf    <- details/vedic-mathematics-workshop.html
+proofs/leadership/waste_management_club/proof.pdf    <- details/waste-management-club.html
+proofs/leadership/water_conservation_survey/proof.pdf    <- details/water-conservation-survey.html
+proofs/experience/youth_for_parivarthan/Youth for parivarthan internship.pdf    <- details/youth-for-parivarthan.html
