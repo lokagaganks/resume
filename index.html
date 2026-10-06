@@ -29,7 +29,26 @@ li{margin:0}
 td{height:24px}.sec th{height:22px}td>.vd,li>.vd{margin:0 0 0 8px}.vd{display:inline-block;margin-top:3px;font:bold 11px Arial,sans-serif;background:var(--btn);color:var(--btnt);border:0;border-radius:3px;padding:3px 8px;cursor:pointer;text-decoration:none}
 .vd:hover{background:#0f2a5a}.vd:focus-visible{outline:2px solid #f90;outline-offset:2px}
 .pt .vd{margin:0 0 0 8px}
-@media(max-width:600px){body{font-size:12px}.paper{margin:0;padding:6px}.dt{width:70px}.lab{width:95px}.pt td+td{width:100px}.paper{overflow-x:auto}table{min-width:640px}}
+.mob{display:none}
+@media(max-width:700px){
+body{font-size:14px}
+.desk{display:none}.mob{display:block}
+.paper{margin:0;padding:10px 8px 14px;border-left:0;border-right:0}
+h1{font-size:21px}.contact{font-size:13px;line-height:1.5;overflow-wrap:anywhere}
+.ms{background:#d9d9d9;border:1px solid #000;font-weight:bold;font-size:14px;padding:4px 8px;margin-top:12px}
+.mi,.mp,.mc,.mk{border:1px solid #000;border-top:0;padding:7px 8px}
+.mh{display:flex;justify-content:space-between;gap:8px;align-items:baseline}
+.mh b{flex:1}.mh span{font-weight:bold;white-space:nowrap;font-size:13px}
+.mt{margin:2px 0;color:#222}
+.mp .mph{background:#d9d9d9;margin:-7px -8px 6px;padding:6px 8px;border-bottom:1px solid #000;font-weight:bold}
+.mp .mph span{display:block;font-size:13px;margin-top:1px}
+.mp ul{padding-left:18px}.mp li{margin:2px 0}
+.mg{background:#efefef;border:1px solid #000;border-top:0;padding:6px 8px}
+.mc{display:flex;gap:8px;align-items:center;justify-content:space-between}
+.mc span{flex:1;min-width:0;overflow-wrap:anywhere}
+.mi .vd,.mp .vd,.mc .vd{margin:6px 0 0;padding:7px 12px;font-size:12px}
+.mc .vd{margin:0;flex:none}
+}
 </style></head>
 <body>
 <div id="app"></div>
@@ -123,7 +142,7 @@ function sec(t,cols){return '<tr class="sec"><th colspan="'+cols+'">'+t+'</th></
 function home(){
 var h='<div class="paper"><div class="top">'+
 '<h1>LOKAGAGAN K S</h1><div class="contact"><a href="mailto:lokagaganks@gmail.com">lokagaganks@gmail.com</a> | <a href="tel:+918123492116">8123492116</a> | Male | Age : 22</div></div>';
-h+='<table><colgroup><col style="width:24%"><col style="width:36%"><col style="width:16%"><col style="width:24%"></colgroup>'+sec('Educational Background',4)+'<tr class="hd"><th>Course</th><th>Institute</th><th>Year</th><th>%/CGPA</th></tr>';
+h+='<div class="desk"><table><colgroup><col style="width:24%"><col style="width:36%"><col style="width:16%"><col style="width:24%"></colgroup>'+sec('Educational Background',4)+'<tr class="hd"><th>Course</th><th>Institute</th><th>Year</th><th>%/CGPA</th></tr>';
 E.forEach(function(r){h+='<tr><td class="c">'+r[1]+'</td><td>'+r[2]+'</td><td class="c">'+r[3]+'</td><td class="c" style="white-space:nowrap">'+r[4]+vd(r[0])+'</td></tr>'});
 h+=sec('Internships/Projects/Volunteering',4);
 P.forEach(function(r){h+='<tr class="pt"><td colspan="3">❖&nbsp; '+r[1]+vd(r[0])+'</td><td>'+r[2]+'</td></tr><tr><td colspan="4">'+lis(r[3])+'</td></tr>'});
@@ -135,7 +154,21 @@ h+=sec('Certification/Training',4);
 T.forEach(function(g){var n=g[2].length;g[2].forEach(function(c,i){h+='<tr>'+(i==0?'<td class="lab" rowspan="'+n+'">'+g[0]+'</td>':'')+'<td colspan="2">'+lis([c+vd(g.ids[i])])+'</td>'+(i==0?'<td class="dt" rowspan="'+n+'">'+g[1]+'</td>':'')+'</tr>'})});
 h+=sec('Technical Skills / Computational Skills',4);
 S.forEach(function(r){h+='<tr><td class="lab">'+r[0]+'</td><td colspan="3">'+lis([r[1]])+'</td></tr>'});
-return h+'</table></div>';
+h+='</table></div>';
+var m='<div class="mob">',p=function(x){return x.replace(/<br>/g,' ')};
+m+='<div class="ms">Educational Background</div>';
+E.forEach(function(r){m+='<div class="mi"><div class="mh"><b>'+p(r[1])+'</b><span>'+r[3]+'</span></div><div class="mt">'+p(r[2])+'</div><div><b>'+r[4]+'</b></div>'+vd(r[0])+'</div>'});
+m+='<div class="ms">Internships/Projects/Volunteering</div>';
+P.forEach(function(r){m+='<div class="mp"><div class="mph">❖ '+r[1]+'<span>'+r[2]+'</span></div>'+lis(r[3])+vd(r[0])+'</div>'});
+m+='<div class="ms">Co-curricular</div>';
+C.forEach(function(r){m+='<div class="mi"><div class="mh"><b>'+r[1]+'</b><span>'+r[3]+'</span></div><div class="mt">'+r[2]+'</div>'+vd(r[0])+'</div>'});
+m+='<div class="ms">Extra-Curricular Activities/ Position of Responsibility</div>';
+X.forEach(function(r){m+='<div class="mk"><div class="mh"><b>'+r[1]+'</b><span>'+r[3]+'</span></div><div class="mt">'+r[2]+'</div></div>'});
+m+='<div class="ms">Certification/Training</div>';
+T.forEach(function(g){m+='<div class="mg mh"><b>'+g[0]+'</b><span>'+g[1]+'</span></div>';g[2].forEach(function(c,i){m+='<div class="mc"><span>'+c+'</span>'+vd(g.ids[i])+'</div>'})});
+m+='<div class="ms">Technical Skills / Computational Skills</div>';
+S.forEach(function(r){m+='<div class="mk"><b>'+r[0]+'</b><div class="mt">'+r[1]+'</div></div>'});
+return h+m+'</div></div>';
 }
 
 function route(){document.getElementById('app').innerHTML=home()}
